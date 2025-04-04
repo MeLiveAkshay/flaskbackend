@@ -20,5 +20,16 @@ def login():
                     'password': 'admin'
                 }
     })
+
+
+@app.route('/api/v1/register', methods=['POST'])
+def register():
+    return jsonify({'message': 'Register successful',
+                'status': 200,
+                'data': {
+                    'username': 'admin',
+                    'password': 'admin'
+                }
+    })
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=9000)
